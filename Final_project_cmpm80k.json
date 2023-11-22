@@ -1973,9 +1973,9 @@
           "HealToBeApplied": 0
         },
         {
-          "gravity": 1000,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "gravity": 1000,
           "jumpSpeed": 600,
           "canGrabPlatforms": true,
           "acceleration": 1500,
@@ -8055,6 +8055,35 @@
                     "\"Checkpoint1\"",
                     "",
                     ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::IsDead"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Health",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"FinalProject\"",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
