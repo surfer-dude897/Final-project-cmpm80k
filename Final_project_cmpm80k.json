@@ -1441,6 +1441,19 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Platformer Pack/UI/d2ed08315913328c70677b58bbf42cf922c57559d910968b572f1c03dae8870d_Menu Button_Default.png",
           "name": "Menu Button_Default.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/9patch_Green Grass 9Patch_all_16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "d09644b38492bb7471261a37cf98e3c9685d4284cf3a4824bd52fc9c667736dc_9patch_Green Grass 9Patch_all_16.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/d09644b38492bb7471261a37cf98e3c9685d4284cf3a4824bd52fc9c667736dc_9patch_Green Grass 9Patch_all_16.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -1472,7 +1485,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4633111824513976,
+        "zoomFactor": 0.4789341884535246,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1505,56 +1518,8 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 128,
-          "layer": "UI",
-          "name": "Lives",
-          "persistentUuid": "a548ad82-c814-478d-87a3-d0b277efecaf",
-          "width": 118,
-          "x": -6,
-          "y": -8,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 128,
-          "layer": "UI",
-          "name": "Lives",
-          "persistentUuid": "46c46932-6d4a-44e3-9fc8-9180b902625e",
-          "width": 118,
-          "x": 97,
-          "y": -10,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 128,
-          "layer": "UI",
-          "name": "Lives",
-          "persistentUuid": "65867349-cefa-4a23-bd14-3bae4f8fa1fb",
-          "width": 118,
-          "x": 205,
-          "y": -9,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
           "height": 537,
-          "layer": "UI",
+          "layer": "Menu",
           "name": "MenuPopupBackground",
           "persistentUuid": "19aa943f-622b-4733-8172-19fef2ad8796",
           "width": 742,
@@ -1570,7 +1535,7 @@
           "customSize": true,
           "depth": 1,
           "height": 57,
-          "layer": "UI",
+          "layer": "Menu",
           "name": "MenuButton",
           "persistentUuid": "7aeb8bf5-39a3-4a1b-837c-ea5af5feebce",
           "width": 332,
@@ -1585,7 +1550,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "UI",
+          "layer": "Menu",
           "name": "ResumeGame",
           "persistentUuid": "ea174524-1eac-4192-acf1-753751d6076e",
           "width": 0,
@@ -1601,7 +1566,7 @@
           "customSize": true,
           "depth": 1,
           "height": 57,
-          "layer": "UI",
+          "layer": "Menu",
           "name": "MenuButton",
           "persistentUuid": "b4ea1b38-0a68-4377-92c7-94eb4afdb2a7",
           "width": 332,
@@ -1617,13 +1582,61 @@
           "customSize": true,
           "depth": 1,
           "height": 57,
-          "layer": "UI",
+          "layer": "Menu",
           "name": "MenuButton",
           "persistentUuid": "22519d6a-d0cb-4949-b601-7fbc1a48a4b6",
           "width": 332,
           "x": 507,
           "y": 439,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 116,
+          "layer": "UI",
+          "name": "Lives",
+          "persistentUuid": "c48c24fb-ce09-49a4-820c-640d61b57a4e",
+          "width": 126,
+          "x": 5,
+          "y": 3,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "layer": "UI",
+          "name": "Platform",
+          "persistentUuid": "d86fec8a-824e-4483-b978-9564c072bf02",
+          "width": 996,
+          "x": 3,
+          "y": 629,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 67,
+          "layer": "UI",
+          "name": "Player",
+          "persistentUuid": "109063d1-430f-418c-8314-e07b142566b5",
+          "width": 87,
+          "x": 8,
+          "y": 547,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1638,7 +1651,28 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "acceleration": 1500,
+              "canGoDownFromJumpthru": true,
+              "canGrabPlatforms": false,
+              "canGrabWithoutMoving": true,
+              "deceleration": 1500,
+              "gravity": 1000,
+              "ignoreDefaultControls": false,
+              "jumpSpeed": 600,
+              "jumpSustainTime": 0.2,
+              "ladderClimbingSpeed": 150,
+              "maxFallingSpeed": 700,
+              "maxSpeed": 250,
+              "name": "PlatformerObject",
+              "slopeMaxAngle": 60,
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "useLegacyTrajectory": false,
+              "xGrabTolerance": 10,
+              "yGrabOffset": 0
+            }
+          ],
           "animations": [
             {
               "name": "Idle",
@@ -3270,6 +3304,30 @@
             "g": 255,
             "r": 255
           }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Platform",
+          "rightMargin": 0,
+          "texture": "d09644b38492bb7471261a37cf98e3c9685d4284cf3a4824bd52fc9c667736dc_9patch_Green Grass 9Patch_all_16.png",
+          "tiled": true,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -3292,6 +3350,9 @@
           },
           {
             "objectName": "ResumeGame"
+          },
+          {
+            "objectName": "Platform"
           }
         ]
       },
@@ -3349,6 +3410,25 @@
                 "GamePause",
                 ""
               ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Player control change"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ]
         },
@@ -3409,6 +3489,14 @@
               "parameters": [
                 "GamePause",
                 "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "DebuggerTools::Pause"
+              },
+              "parameters": [
+                ""
               ]
             }
           ]
@@ -3493,7 +3581,7 @@
           "camera3DNearPlaneDistance": 0.1,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "isLocked": false,
+          "isLocked": true,
           "name": "",
           "renderingType": "",
           "visibility": true,
@@ -3510,6 +3598,38 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": true,
+          "name": "Menu",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
         },
         {
           "ambientLightColorB": 200,
@@ -3560,6 +3680,14 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
         {
           "name": "Resizable",
