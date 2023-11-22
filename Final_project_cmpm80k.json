@@ -1930,6 +1930,36 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/f270f84b907c4d653ca7fad99ab890b31642bdbc0b22a189ff45be51240cf52b_Flat Bar Blue Fill Bar.png",
           "name": "Flat Bar Blue Fill Bar.png"
         }
+      },
+      {
+        "file": "assets/Sound/Footsteps-in-grass-slow-A-www.fesliyanstudios.com.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Sound\\Footsteps-in-grass-slow-A-www.fesliyanstudios.com.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Sound/Crystal.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Sound\\Crystal.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Sound/pop-39222.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Sound\\pop-39222.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -3779,6 +3809,12 @@
       "name": "Checkpointy",
       "type": "number",
       "value": 0
+    },
+    {
+      "folded": true,
+      "name": "GrassSound",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -7620,6 +7656,15 @@
             },
             {
               "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "GrassSound",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Checkpoints::SaveCheckpoint"
               },
               "parameters": [
@@ -8203,6 +8248,17 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Checkpoint",
+                    "Animation",
+                    "=",
+                    "\"CheckpointOff\""
+                  ]
                 }
               ],
               "actions": [
@@ -8229,6 +8285,18 @@
                     "\"Checkpoint1\"",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Sound\\pop-39222.mp3",
+                    "",
+                    "20",
+                    "1"
+                  ]
                 }
               ]
             },
@@ -8251,11 +8319,14 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Delete"
+                    "value": "PlaySound"
                   },
                   "parameters": [
-                    "Crystal",
-                    ""
+                    "",
+                    "assets\\Sound\\Crystal.mp3",
+                    "",
+                    "20",
+                    "1"
                   ]
                 },
                 {
@@ -8266,6 +8337,15 @@
                     "GreenFlatBar",
                     "=",
                     "40",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Crystal",
                     ""
                   ]
                 }
@@ -8297,6 +8377,234 @@
                     "",
                     "\"Player&map\"",
                     ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Sound",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GrassSound",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject",
+                        "GrassL",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GrassSound",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\Sound\\Footsteps-in-grass-slow-A-www.fesliyanstudios.com.mp3",
+                        "0",
+                        "",
+                        "20",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject",
+                        "GrassR",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GrassSound",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\Sound\\Footsteps-in-grass-slow-A-www.fesliyanstudios.com.mp3",
+                        "0",
+                        "",
+                        "20",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::IsObjectOnGivenFloor"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject",
+                        "Grass",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GrassSound",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\Sound\\Footsteps-in-grass-slow-A-www.fesliyanstudios.com.mp3",
+                        "0",
+                        "",
+                        "20",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsJumping"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "StopSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GrassSound",
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "StopSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GrassSound",
+                    "False"
                   ]
                 }
               ]
